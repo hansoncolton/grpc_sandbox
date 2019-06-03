@@ -2,7 +2,7 @@
 
 This project is a basic API using gRPC and protobufs in Go
 
-Run go run main.go to run the app, run go build main.go to build an executable file.
+Run <b>go run main.go</b> to run the app, run <b>go build main.go</b> to build an executable file.
 
 The primary goal of this project is to learn more about GoLang and its capabilities. 
 
