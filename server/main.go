@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"grpc_tutorial/proto"
+	"grpc_sandbox/proto"
 	"net"
 
 	"google.golang.org/grpc"

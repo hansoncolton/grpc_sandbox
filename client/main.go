@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"grpc_tutorial/proto"
+	"grpc_sandbox/proto"
 	"log"
 	"net/http"
 	"strconv"
