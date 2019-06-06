@@ -7,11 +7,23 @@ message Request {
   int64 b = 2;
 }
 
+message RequestById {
+  int64 a = 1;
+}
+
 message Response { 
   int64 result = 1; 
+}
+
+
+message Scientist {
+	int64 Id = 1;
+	string FirstName = 2;
+	string LastName = 3;
 }
 
 service AddService {
   rpc Add(Request) returns (Response);
   rpc Multiply(Request) returns (Response);
+  rpc Scientists(RequestById) returns (Scientist);
 }

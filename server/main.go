@@ -11,6 +11,12 @@ import (
 
 type server struct{}
 
+type Scientist struct {
+	Id        int64
+	FirstName string
+	LastName  string
+}
+
 func main() {
 	listener, err := net.Listen("tcp", ":4040")
 	if err != nil {
@@ -41,4 +47,10 @@ func (s *server) Multiply(ctx context.Context, request *proto.Request) (*proto.R
 	result := a * b
 
 	return &proto.Response{Result: result}, nil
+}
+
+func (s *server) Scientists(ctx context.Context, request *proto.RequestById) (*proto.Scientist, error) {
+	a := request.GetA()
+
+	return &proto.Scientist{Id: a, FirstName: "Brian", LastName: "Smith"}, nil
 }
