@@ -11,7 +11,8 @@ type Server struct {
 }
 
 // SayHello generates response to a Ping request
-func (s *Server) SayHello(ctx context.Context, in *PingMessage) (*PingMessage, error) {
-	log.Printf("Receive message %s", in.Greeting)
-	return &PingMessage{Greeting: "bar"}, nil
+//func (s *Server) SayHello(ctx context.Context, in *PingMessage) (*PingMessage, error) {
+func (s *Server) SayHello(ctx context.Context, in *NoParam) (*PingMessage, error) {
+	log.Printf("Received ping")
+	return &PingMessage{Greeting: "hello"}, nil
 }

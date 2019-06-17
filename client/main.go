@@ -53,7 +53,7 @@ func main() {
 
 	c := api.NewPingClient(conn)
 
-	response, err := c.SayHello(context.Background(), &api.PingMessage{Greeting: "foo"})
+	response, err := c.SayHello(context.Background(), &api.NoParam{})
 	if err != nil {
 		log.Fatalf("error when calling SayHello: %s", err)
 	}

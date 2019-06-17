@@ -15,8 +15,9 @@
     "application/json"
   ],
   "paths": {
-    "/1/ping": {
-      "post": {
+    "/pingapi": {
+      "get": {
+        "summary": "rpc SayHello(PingMessage) returns (PingMessage) {",
         "operationId": "SayHello",
         "responses": {
           "200": {
@@ -26,16 +27,6 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/apiPingMessage"
-            }
-          }
-        ],
         "tags": [
           "Ping"
         ]

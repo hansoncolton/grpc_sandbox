@@ -8,11 +8,13 @@ message PingMessage {
   string greeting = 1;
 }
 
+message NoParam {}
+
 service Ping {
-  rpc SayHello(PingMessage) returns (PingMessage) {
+  //  rpc SayHello(PingMessage) returns (PingMessage) {
+  rpc SayHello(NoParam) returns (PingMessage) {
     option (google.api.http) = {
-        post: "/1/ping"
-        body: "*"
+        get: "/pingapi"
     };
   }
 }
